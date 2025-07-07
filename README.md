@@ -126,7 +126,16 @@ return {
 
 
 This approach ensures compatibility with OpenVLA Dataset and Shape.
-### 6. **tfds build** - Should work if your data is setup correctly but you must be inside custom_reach1k folder
+
+### 6. **Building the Dataset**
+
+Once your data is set up correctly, you can build the TFDS dataset using:
+
+```bash
+tfds build
+```
+
+**Important**: You must run this command from inside the `custom_reach1k` folder for it to work properly.
 
 
 
