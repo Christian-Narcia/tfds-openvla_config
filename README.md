@@ -1,7 +1,16 @@
-# RLDS repository https://github.com/kpertsch/rlds_dataset_builder/tree/main 
-# OPENVLA repository https://github.com/openvla/openvla/tree/main 
+# OpenVLA TFDS Configuration
 
-To generate data you can look at **save_data_example.py** to see and example or run **create_example_data.py** provided by RLDS inside **example_dataset folder**
+## Related Repositories
+
+- **RLDS Repository**: https://github.com/kpertsch/rlds_dataset_builder/tree/main
+- **OpenVLA Repository**: https://github.com/openvla/openvla/tree/main
+
+## Data Generation
+
+To generate data, you have two options:
+
+1. **Custom Example**: Look at `save_data_example.py` to see a custom implementation example
+2. **RLDS Example**: Run `create_example_data.py` provided by RLDS inside the `example_dataset` folder
 
 
 # OpenVLA TFDS Setup Example
