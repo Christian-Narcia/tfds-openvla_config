@@ -211,4 +211,4 @@ import custom_reach1k.custom_reach1k_dataset_builder
 
 This integration allows OpenVLA to seamlessly work with your custom dataset while maintaining compatibility with the existing training pipeline.
 
-Look at **File**: `openvla.sh` for example and needed export for dataset setup
+Look at **File**: `openvla.sh` for example and needed export path for dataset setup
