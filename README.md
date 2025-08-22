@@ -201,7 +201,7 @@ Add the path to your dataset builder directory:
 ######################################
 #ADD path for dataset builder
 import os
-os.environ['TFDS_DATASETS'] = '~/openvla/rlds_dataset_builder'
+os.environ['TFDS_DATASETS'] = '~/[path to folder]/rlds_dataset_builder'
 
 
 import custom_reach1k.custom_reach1k_dataset_builder

@@ -65,22 +65,24 @@ while (saved + total_existing) < N_EPISODES:
     episode = []
     obs = env.reset()
 
-    episode_file = os.path.join(start_save_dir, f"episode_{ep}.npy")
+    # episode_file = os.path.join(start_save_dir, f"episode_{ep}.npy")
 
 
     for step in range(EPISODE_LENGTH):
-        action, _ = model.predict(np.concatenate((obs['object-state'], obs['robot0_proprio-state'])))
-        obs, reward, done, _ = env.step(action)
-
 
         img = np.asarray(obs[cameraName+"_image"], dtype=np.uint8) # expected format for openvla
         img = np.flipud(img) # Flip the image vertically to match the original orientation (Mine was rendered upside down) you might not need this
         # Store step data
+
+        action, _ = model.predict(np.concatenate((obs['object-state'], obs['robot0_proprio-state'])))
+
         episode.append({
             'image': img,
             'action': np.array(action, dtype=np.float32),
             'language_instruction': prompt
         })
+        obs, reward, done, _ = env.step(action)
+
 
         if done:
             print("done at step", step)
