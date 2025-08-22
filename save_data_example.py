@@ -39,7 +39,12 @@ os.makedirs(save_dir, exist_ok=True)
 
 EPISODE_LENGTH = 100
 N_EPISODES = 1000
-prompt = "grasp the cube"
+
+instruction = "reach the cube"
+# instruction = "grasp the cube"
+
+
+prompt = f"In: What action should the robot take to {instruction}?\nOut:"
 
 # Find existing episode numbers
 existing_files = {
